@@ -4,19 +4,29 @@
 
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 944.5 276.2" style="enable-background:new 0 0 944.5 276.2;" xml:space="preserve" {{ $attributes }}>
-<style type="text/css">
-	.st0{font-family:'ErasITC-Medium';}
-	.st1{font-size:128.8303px;}
-	.st2{fill:url(#XMLID_43_);}
-</style>
-<text id="XMLID_1_" transform="matrix(1 0 0 1 329.8896 196.857)" class="st0 st1">Book Shop</text>
-<linearGradient id="XMLID_43_" gradientUnits="userSpaceOnUse" x1="-1.8484" y1="242.6854" x2="262.0447" y2="90.3266">
-	<stop  offset="0" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#000000"/>
-</linearGradient>
-<path id="XMLID_2_" class="st2" d="M133.1,0c-25.3-2.1-78.4,125-35.8,171.8c43.6,47.8,167.7-9.6,171.8,3.6
-	c3.4,10.9-80.4,53.4-180.5,69.6C41,252.7,5.7,258.4,0.7,247C-13,216.1,191.1,57.8,265.5,107.4c25.2,16.8,32.4,55.3,28.6,82.3
-	c-6.7,47.5-52,92.2-82.3,85.9C144.9,261.7,168.8,3,133.1,0z"/>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" viewBox="0 0 944.5 276.2" style="enable-background:new 0 0 944.5 276.2;" xml:space="preserve"
+    {{ $attributes }}>
+    <style type="text/css">
+        .st0 {
+            font-family: 'ErasITC-Medium';
+        }
+
+        .st1 {
+            font-size: 128.8303px;
+        }
+
+        .st2 {
+            fill: url(#XMLID_43_);
+        }
+
+    </style>
+    <text id="XMLID_1_" transform="matrix(1 0 0 1 329.8896 196.857)" class="st0 st1">Book Shop</text>
+    <linearGradient id="XMLID_43_" gradientUnits="userSpaceOnUse" x1="-1.8484" y1="242.6854" x2="262.0447" y2="90.3266">
+        <stop offset="0" style="stop-color:#b6d4fc" />
+        <stop offset="1" style="stop-color:#006eff" />
+    </linearGradient>
+    <path id="XMLID_2_" class="st2" d="M133.1,0c-25.3-2.1-78.4,125-35.8,171.8c43.6,47.8,167.7-9.6,171.8,3.6
+ c3.4,10.9-80.4,53.4-180.5,69.6C41,252.7,5.7,258.4,0.7,247C-13,216.1,191.1,57.8,265.5,107.4c25.2,16.8,32.4,55.3,28.6,82.3
+ c-6.7,47.5-52,92.2-82.3,85.9C144.9,261.7,168.8,3,133.1,0z" />
 </svg>
