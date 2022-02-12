@@ -16,10 +16,10 @@
                         class="ml-3 md:ml-16 hover:shadow-md mr-auto py-1 md:py-2 w-16 md:w-24 rounded bg-green-500 text-white">New</button>
                 </div>
                 <div class="w-full mb-1 border-gray-600 border-b-2 md:hidden"></div>
-                <div class="mb-2">
+                <div class="mb-2 md:my-4">
                     <table class="table-auto min-w-full">
                         <thead class="border-b-2 border-gray-500">
-                            <tr class="text-gray-500 hidden md:table-row">
+                            <tr class="text-gray-500 text-sm hidden md:table-row">
                                 <th class="text-left">#</th>
                                 <th class="text-left">Title</th>
                                 <th class="text-left">Aurthor Name</th>
