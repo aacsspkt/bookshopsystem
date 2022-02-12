@@ -15,13 +15,13 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('book')" :active="request()->routeIs('book')">
+                    <x-nav-link :href="route('books')" :active="request()->routeIs('books')">
                         {{ __('Book') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('cd')" :active="request()->routeIs('cd')">
+                    <x-nav-link :href="route('cds')" :active="request()->routeIs('cds')">
                         {{ __('Cd') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('user')" :active="request()->routeIs('user')">
+                    <x-nav-link :href="route('users')" :active="request()->routeIs('users')">
                         {{ __('User') }}
                     </x-nav-link>
                 </div>
@@ -82,13 +82,13 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('book')" :active="request()->routeIs('book')">
+            <x-responsive-nav-link :href="route('books')" :active="request()->routeIs('books')">
                 {{ __('Book') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('cd')" :active="request()->routeIs('cd')">
+            <x-responsive-nav-link :href="route('cds')" :active="request()->routeIs('cds')">
                 {{ __('Cd') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('user')" :active="request()->routeIs('user')">
+            <x-responsive-nav-link :href="route('users')" :active="request()->routeIs('users')">
                 {{ __('User') }}
             </x-responsive-nav-link>
         </div>
