@@ -20,26 +20,26 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
-        @include('layouts.navigation')
+        @include('shared.navigation')
 
         <!-- Page Heading -->
-        <header class="max-w-7xl mx-auto px-5 mt-2">
-            <div class="max-w-7xl py-4 px-4 sm:px-6">
+        <header class="w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                 {{ $header }}
             </div>
         </header>
 
         <!-- Page Content -->
-        <main>
+        <main class="w-full">
             {{ $slot }}
         </main>
-        <div class="block relative lg:absolute bottom-0 min-w-full">
-            <div class="max-w-7xl px-5 py-4 md:py-6 mx-auto">
-                <div class="px-4 sm:px-6 ">
+        <footer class="w-full lg:absolute lg:bottom-0">
+            <div class="max-w-7xl px-5 py-6 mx-auto">
+                <div class="px-6">
                     <h4 class="text-gray-400 text-sm">&copy; 2022 Ashish Sapkota </h4>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
 </body>
 
