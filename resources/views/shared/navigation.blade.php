@@ -15,15 +15,15 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('books')" :active="request()->routeIs('books')">
+                    <x-nav-link :href="route('books.index')" :active="request()->routeIs('books.index')">
                         {{ __('Book') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('cds')" :active="request()->routeIs('cds')">
+                    {{-- <x-nav-link :href="route('cds.index')" :active="request()->routeIs('cds.index')">
                         {{ __('Cd') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('users')" :active="request()->routeIs('users')">
+                    <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
                         {{ __('User') }}
-                    </x-nav-link>
+                    </x-nav-link> --}}
                 </div>
             </div>
 
@@ -82,15 +82,15 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('books')" :active="request()->routeIs('books')">
+            <x-responsive-nav-link :href="route('books.index')" :active="request()->routeIs('books.index')">
                 {{ __('Book') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('cds')" :active="request()->routeIs('cds')">
+            {{-- <x-responsive-nav-link :href="route('cds.index')" :active="request()->routeIs('cds.index')">
                 {{ __('Cd') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('users')" :active="request()->routeIs('users')">
                 {{ __('User') }}
-            </x-responsive-nav-link>
+            </x-responsive-nav-link> --}}
         </div>
 
         <!-- Responsive Settings Options -->

@@ -37,14 +37,14 @@
                                 <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                                     {{ __('Dashboard') }}
                                 </x-nav-link>
-                                <x-nav-link :href="route('book')" :active="request()->routeIs('book')">
-                                    {{ __('Book') }}
+                                <x-nav-link :href="route('books.index')" :active="request()->routeIs('books.index')">
+                                    {{ __('Books') }}
                                 </x-nav-link>
-                                <x-nav-link :href="route('cd')" :active="request()->routeIs('cd')">
-                                    {{ __('Cd') }}
+                                <x-nav-link :href="route('cds.index')" :active="request()->routeIs('cds.index')">
+                                    {{ __('Cds') }}
                                 </x-nav-link>
-                                <x-nav-link :href="route('user')" :active="request()->routeIs('user')">
-                                    {{ __('User') }}
+                                <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
+                                    {{ __('Users') }}
                                 </x-nav-link>
                             @endauth
                         </div>
@@ -77,7 +77,7 @@
 
                                         <x-dropdown-link :href="route('logout')"
                                             onclick="event.preventDefault();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                this.closest('form').submit();">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    this.closest('form').submit();">
                                             {{ __('Log Out') }}
                                         </x-dropdown-link>
                                     </form>
@@ -123,14 +123,14 @@
                         <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                             {{ __('Dashboard') }}
                         </x-responsive-nav-link>
-                        <x-responsive-nav-link :href="route('book')" :active="request()->routeIs('book')">
-                            {{ __('Book') }}
+                        <x-responsive-nav-link :href="route('books.index')" :active="request()->routeIs('books.index')">
+                            {{ __('Books') }}
                         </x-responsive-nav-link>
-                        <x-responsive-nav-link :href="route('cd')" :active="request()->routeIs('cd')">
-                            {{ __('Cd') }}
+                        <x-responsive-nav-link :href="route('cds.index')" :active="request()->routeIs('cds.index')">
+                            {{ __('Cds') }}
                         </x-responsive-nav-link>
-                        <x-responsive-nav-link :href="route('user')" :active="request()->routeIs('user')">
-                            {{ __('User') }}
+                        <x-responsive-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
+                            {{ __('Users') }}
                         </x-responsive-nav-link>
                     </div>
 
