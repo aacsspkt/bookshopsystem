@@ -24,7 +24,7 @@
 
         <!-- Page Heading -->
         <header class="w-full">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-baseline">
                 {{ $header }}
             </div>
         </header>
