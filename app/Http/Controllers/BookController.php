@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookFormRequest;
 use App\Models\Book;
+use Facade\FlareClient\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class BookController extends Controller
 {
@@ -25,7 +28,8 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        $book = null;
+        return view('book.form', compact('book'));
     }
 
     /**
@@ -34,9 +38,14 @@ class BookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BookFormRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        $book = Book::create($validated);
+        if ($book) {
+            return redirect()->route('books.index');
+        }
     }
 
     /**
@@ -47,7 +56,7 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        //
+        return view('book.detail', compact('book'));
     }
 
     /**
@@ -58,7 +67,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        //
+        return view('book.form', compact('book'));
     }
 
     /**
@@ -68,9 +77,19 @@ class BookController extends Controller
      * @param  \App\Models\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Book $book)
+    public function update(BookFormRequest $request, Book $book)
     {
-        //
+        $validated = $request->validate();
+
+        dd($validated);
+
+        $book->title = $validated['title'];
+        $book->firstname = $validated['firstname'];
+        $book->lastname = $validated['lastname'];
+        $book->pages = $validated['pages'];
+        $book->price = $validated['price'];
+
+        // dd($book);
     }
 
     /**
