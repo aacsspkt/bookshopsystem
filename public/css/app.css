@@ -726,9 +726,6 @@ select {
 .-mt-px {
   margin-top: -1px;
 }
-.mr-4 {
-  margin-right: 1rem;
-}
 .block {
   display: block;
 }
@@ -1559,10 +1556,6 @@ select {
     max-width: 28rem;
   }
 
-  .sm\:max-w-lg {
-    max-width: 32rem;
-  }
-
   .sm\:flex-1 {
     flex: 1 1 0%;
   }
@@ -1585,11 +1578,6 @@ select {
 
   .sm\:justify-between {
     justify-content: space-between;
-  }
-
-  .sm\:gap-x-2 {
-    -moz-column-gap: 0.5rem;
-         column-gap: 0.5rem;
   }
 
   .sm\:rounded-lg {

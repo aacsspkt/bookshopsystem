@@ -28,8 +28,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        $book = null;
-        return view('book.form', compact('book'));
+        return view('book.create');
     }
 
     /**
@@ -67,7 +66,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        return view('book.form', compact('book'));
+        return view('book.edit', compact('book'));
     }
 
     /**
@@ -79,17 +78,15 @@ class BookController extends Controller
      */
     public function update(BookFormRequest $request, Book $book)
     {
-        $validated = $request->validate();
 
-        dd($validated);
-
-        $book->title = $validated['title'];
-        $book->firstname = $validated['firstname'];
-        $book->lastname = $validated['lastname'];
-        $book->pages = $validated['pages'];
-        $book->price = $validated['price'];
-
-        // dd($book);
+        $book->title = $request->input('title');
+        $book->firstname = $request->input('firstname');
+        $book->lastname = $request->input('lastname');
+        $book->pages = $request->input('pages');
+        $book->price = $request->input('price');
+        if ($book->save()) {
+            return redirect()->route('books.index');
+        }
     }
 
     /**
@@ -100,6 +97,8 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        //
+        if ($book->delete()) {
+            redirect()->route('books.index');
+        }
     }
 }

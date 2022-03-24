@@ -5,7 +5,7 @@
                 {{ __('Book') }}
             </a>
         </h2>
-        / Create
+        / Edit
     </x-slot>
 
     <div class="py-2">
@@ -13,23 +13,23 @@
             <div class="bg-white shadow-md rounded mx-6 sm:mx-3 py-4 px-6">
                 <div class="mb-2 flex">
                     <h4 class="font-bold  my-auto text-lg text-gray-700">
-                        Create New Book
+                        Edit Book
                     </h4>
                 </div>
                 {{-- <div class="w-full mb-1 border-gray-600 border-b-2 md:hidden"> --}}
 
                 {{-- </div> --}}
                 <div class="mb-2 md:my-4">
-                    <form id="form-1" method="POST" action="{{ route('books.store') }}">
+                    <form id="form-1" method="POST" action="{{ route('books.update', $book) }}">
                         @csrf
+                        @method('PUT')
 
                         <div class="mb-4 sm:max-w-xl">
                             <x-label for="title" :value="__('Title')" />
 
                             <input id="title"
                                 class="block mt-1 w-full rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-5 {{ $errors->first('title') ? 'border-red-400' : 'border-gray-300' }}"
-                                type="text" name="title"
-                                value="{{ (old('title') ? old('title') : $book) ? $book->title : old('title') }}"
+                                type="text" name="title" value="{{ old('title') ? old('title') : $book->title }}"
                                 required autofocus placeholder="Title" />
                             @error('title')
                                 <span class="text-sm text-red-400">{{ $errors->first('title') }}</span>
@@ -43,8 +43,8 @@
                                     <input id="firstname"
                                         class="block w-full mt-1 col-auto rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 {{ $errors->first('firstname') ? 'border-red-400' : 'border-gray-300' }}"
                                         type="text" name="firstname"
-                                        value="{{ (old('firstname') ? old('firstname') : $book) ? $book->firstname : old('firstname') }}"
-                                        required placeholder="First Name" />
+                                        value="{{ old('firstname') ? old('firstname') : $book->firstname }}" required
+                                        placeholder="First Name" />
                                     @error('firstname')
                                         <span class="text-sm text-red-400">{{ $errors->first('firstname') }}</span>
                                     @enderror
@@ -53,8 +53,8 @@
                                     <input id="surname"
                                         class="block w-full mt-1 col-auto rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 {{ $errors->first('surname') ? 'border-red-400' : 'border-gray-300' }}"
                                         type="text" name="surname"
-                                        value="{{ (old('surname') ? old('surname') : $book) ? $book->surname : old('surname') }}"
-                                        required placeholder="Surname" />
+                                        value="{{ old('surname') ? old('surname') : $book->surname }}" required
+                                        placeholder="Surname" />
                                     @error('surname')
                                         <span class="text-sm text-red-400">{{ $errors->first('surname') }}</span>
                                     @enderror
@@ -67,8 +67,7 @@
 
                             <input id="pages"
                                 class="block mt-1 w-full rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 {{ $errors->first('pages') ? 'border-red-400' : 'border-gray-300' }}"
-                                type="text" name="pages"
-                                value="{{ (old('pages') ? old('pages') : $book) ? $book->pages : old('pages') }}"
+                                type="text" name="pages" value="{{ old('pages') ? old('pages') : $book->pages }}"
                                 required autofocus placeholder="No. of Pages" />
                             @error('pages')
                                 <span class="text-sm text-red-400">{{ $errors->first('pages') }}</span>
@@ -80,8 +79,7 @@
 
                             <input id="price"
                                 class="block mt-1 w-full rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 {{ $errors->first('price') ? 'border-red-400' : 'border-gray-300' }}"
-                                type="text" name="price"
-                                value="{{ (old('price') ? old('price') : $book) ? $book->price : old('price') }}"
+                                type="text" name="price" value="{{ old('price') ? old('price') : $book->price }}"
                                 required autofocus placeholder="Price" />
                             @error('price')
                                 <span class="text-sm text-red-400">{{ $errors->first('price') }}</span>
@@ -89,8 +87,8 @@
                         </div>
 
                         <button form="form-1"
-                            class="w-full sm:w-24 inline-flex justify-center items-center rounded px-4 py-1.5 hover:shadow-md bg-blue-400 text-white disabled:opacity-25 transition ease-in-out duration-150">
-                            Save
+                            class="w-full sm:w-24 inline-flex justify-center items-center rounded px-4 py-1.5 hover:shadow-md bg-amber-400 text-white disabled:opacity-25 transition ease-in-out duration-150">
+                            Update
                         </button>
                     </form>
                 </div>
